@@ -1,7 +1,7 @@
 # Sky Bet League Competition
 This project is to fetch data from an API, clean/re-structure that data, and use it to feed analytics.
 
-Environment: Google Colab.
+Environment: Google Colab. \n
 Original file is located at https://colab.research.google.com/drive/1rl-uw9S-JfW1z9fUedy19AyTn7V0XwtB
 
 ## Connecting Drive to Colab and Mounting Google Drive
@@ -17,7 +17,7 @@ drive.mount('/content/drive')
 !apt-get install openjdk-8-jdk-headless -qq > /dev/null
 ```
 
-## Installing Apache Spark 3.1.2 with Hadoop 3.2 from the link"""
+## Installing Apache Spark 3.1.2 with Hadoop 3.2 from the link
 
 ```
 !wget -q https://downloads.apache.org/spark/spark-3.1.2/spark-3.1.2-bin-hadoop3.2.tgz
