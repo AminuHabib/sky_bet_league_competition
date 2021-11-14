@@ -1,7 +1,7 @@
 # Sky Bet League Competition
 This project is to fetch data from an API, clean/re-structure that data, and use it to feed analytics.
 
-Environment: Google Colab.
+Environment: Google Colab. \
 Original file is located at https://colab.research.google.com/drive/1rl-uw9S-JfW1z9fUedy19AyTn7V0XwtB
 
 ## Connecting Drive to Colab and Mounting Google Drive
@@ -60,5 +60,6 @@ get_ipython().system_raw('./ngrok http 4050 &')
 ```
 
 ## Author 
-Name: Aminu Habib
+
+Name: Aminu Habib \
 InCrowd Sports
