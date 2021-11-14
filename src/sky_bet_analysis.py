@@ -60,7 +60,7 @@ spark = SparkSession.builder\
         .getOrCreate()
 print("A Sky Bet League Competition Analysis")
 
-"""Loading Sky_competition_clean.txt csv file into PySpark"""
+"""Read Sky_competition_clean.txt csv file into PySpark"""
 
 match_data = spark.read.csv("/content/Sky_competition_clean.txt", header=True, inferSchema=True)
 
@@ -135,6 +135,8 @@ spark.sql("SELECT team_name, COUNT(away_team_id) AS away_matches_played, \
           FROM match_data \
           GROUP BY team_name").show()
 
+"""Points from a match"""
+
 spark.sql("SELECT team_name, away_team_score, \
           home_team_score, \
           CASE \
@@ -152,3 +154,17 @@ spark.sql("SELECT away_team_id, team_name, sum(away_team_score) as total_goal_sc
           where a.away_team_name = a.team_name \
           GROUP BY away_team_id, team_name \
           ORDER BY total_goal_scored DESC").show()
+
+"""Save to file"""
+
+match_data.write.csv("/content/drive/MyDrive/sky_bet_competition/processed_data.csv", header=True)
+
+"""Why I decided to use Pyspark libraries:
+
+1.   I prefer using a distributed approach whenever I am doing data analysis.
+2.   Last but not the least, the compute and storage capabilities are more advantageous.
+
+
+
+
+"""
